@@ -1,0 +1,29 @@
+<html>
+    <body onload="corona()">
+        <p id="text"></p>
+
+        <script>
+            function corona() {
+                var font = 1;
+                var text = "CORONA VIRUS";
+                var colour = "blue";
+                var element = document.getElementById("text");
+                var timer = setInterval(increase, 100);
+
+                function increase() {
+                    if (font < 50) {
+                        font++;
+                        element.innerHTML = text;
+                        element.style.fontSize = font+'pt';
+                        element.style.color = colour;
+                    }
+
+                    if (font == 50) {
+                        element.style.color = "teal";
+                        closeInterval(timer);
+                    }
+                }
+            }
+            </script>
+    </body>
+</html>
